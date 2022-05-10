@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+}
+.logo {
+  max-width: 150px;
+}
+button {
+  border-radius: 150px;
+  border: none;
+  padding: 10px;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.nav button {
+  background-color: white;
+  box-shadow: 0px 0px 7px 1px rgb(125 125 125 / 12%);
+}
+/* hero */
+.hero {
+  background-color: hsl(193, 100%, 96%);
+  background-image: url(images/bg-hero-mobile.svg);
+  padding: 25px 15px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 1.1em;
+  font-weight: 400;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.btn {
+  color: white;
+  background-color: hsl(322, 100%, 66%);
+  width: 249px;
+  padding: 14px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.illustration-mockups {
+  width: 100%;
+  margin-top: 70px;
+}
+/* cards */
+.cards img {
+  margin-bottom: 60px;
+  width: 90%;
+}
+.cards {
+  margin-top: 60px;
+  padding: 30px;
+}
+.card {
+  text-align: center;
+  padding: 14px;
+  box-shadow: 0px 0px 16px 3px rgb(125 125 125 / 16%);
+  border-radius: 10px;
+}
+.card:nth-child(2) {
+  margin: 30px 0;
+}
+.card:nth-child(3) {
+  margin-bottom: 120px;
+}
+.card span {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.card p {
+  margin-top: 22px;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.ready-to-build {
+  margin-bottom: -97px;
+  background-color: white;
+  position: relative;
+}
+.card.ready-to-build span {
+  font-size: 1.5em;
+}
+.card.ready-to-build .btn {
+  margin-top: 15px;
+}
+/* footer */
+footer {
+  color: white;
+  padding: 150px 10px 20px;
+  background-color: hsl(192, 100%, 9%);
+}
+.location,
+.phone,
+.email {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+}
+.phone {
+  margin: 15px 0;
+}
+footer i {
+  margin-top: 4px;
+  margin-right: 21px;
+}
+footer .about {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+.text-footer {
+  font-size: 16px;
+}
+.foo-1{
+  margin-bottom: 35px;
+}
+.text-footer{
+  text-align: center;
+  margin-top:35px ;
+}
+@media (min-width: 992px) {
+  /* header */
+  button {
+    width: 142px;
+    font-weight: 800;
+  }
+  .hero {
+    background-image: url(images/bg-hero-desktop.svg);
+    display: grid;
+    grid-template-areas:
+      "nav nav"
+      "text-hero img";
+    height: 100vh;
+    padding: 40px;
+  }
+  .nav {
+    grid-area: nav;
+    margin-bottom: 0;
+  }
+  .text-hero {
+    padding-right: 40px;display: flex;
+    grid-area: text-hero;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+  }
+  .hero p {
+    padding: 0;
+  }
+  .hero span {
+    font-size: 2.5em;
+  }
+  .illustration-mockups {
+    min-width: 350px;
+  }
+
+  /* card */
+  .cards {
+    display: flex;
+    padding: 80px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards .card {
+    display: grid;
+    grid-template-areas: "kiri kanan";
+    padding: 40px;
+  }
+  .card img {
+    grid-area: kanan;
+    width: 380px;
+    margin-bottom: 0;
+  }
+  .card .text-card {
+    grid-area: kiri;
+    padding: 100px;
+    text-align: start;
+  }
+  .card img.kiri {
+    grid-area: kiri;
+  }
+  .card .text-card.kanan {
+    grid-area: kanan;
+  }
+  .ready-to-build {
+    margin-bottom: -185px;
+  }
+  .card.ready-to-build {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+  .list{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .list li:nth-child(2){
+    line-height: 100px;
+  }
+  .text-footer li:nth-child(2){
+    line-height: 100px;
+  }
+  .text-footer{
+    text-align: start;
+    margin-top:0;
+  }
+}
